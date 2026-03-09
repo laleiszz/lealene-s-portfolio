@@ -164,16 +164,94 @@ footer {
     text-align: center;
 }
 
-@media (max-width:700px){
-    .picandinfo{
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    }
+@media (max-width:600px){
+header{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-    .hi{
-    font-size:50px;
-    }
+.myportfolio{
+    padding:15px;
+    font-size:30px;
+    text-align:center;
+    max-width:90%;
+}
+
+/* NAVBAR */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    padding:5px 13px;
+}
+    
+.picandinfo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.picture{
+    width:100%;
+    max-width:310px;
+    border-radius:30px;
+    box-shadow:0 0 20px black;
+}
+
+.hi{
+    font-size:clamp(40px,8vw,120px);
+    color:rgb(87,16,16);
+}
+
+/* SECTION TITLES */
+
+.personal,
+.aboutMe{
+    color:rgb(87,16,16);
+    font-size:40px;
+    margin-top:20px;
+    text-align:center;
+}
+
+/* PERSONAL INFO */
+
+.infs{
+    padding:20px;
+    max-width:500px;
+    margin:20px auto;
+    font-size:20px;
+}
+
+/* ABOUT ME */
+
+.paragraph{
+    padding:20px;
+    max-width:800px;
+    margin:20px auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px;
+    text-align:center;
+    margin-top:80px;
+}
         
     </style>
 </head>
@@ -228,6 +306,7 @@ footer {
 </footer>
 
 </html>
+
 
 
 
