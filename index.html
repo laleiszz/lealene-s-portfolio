@@ -162,15 +162,16 @@ footer {
     color: antiquewhite;
     text-align: center;
 }
-     @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 768px) {
         .picandinfo {
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         .hi {
-            font-size: 80px;
+            font-size: 50px;
         }
 
         .personal, .aboutMe {
@@ -179,24 +180,33 @@ footer {
         }
 
         .infs, .paragraph {
-            width: 90%;
-            margin-left: 0;
+            width: 80%;
+            max-height: fit-content;
             text-align: center;
+            align-items: center;
+            padding: auto;
+        }
+        
+        .myportfolio {
+            width: 80%;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-                 .myportfolio {
-            width: 90%;
-            font-size: 24px;
+        nav ul {
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
         }
 
         header {
-            padding: 10px 15px;
+            max-width: fit-content;
             margin-bottom: 50px;
         }
 
         footer {
             margin-top: 200px;
-            padding: 20px 15px;
+            max-width: fit-content;
         }
     }
 
@@ -253,6 +263,7 @@ footer {
 </footer>
 
 </html>
+
 
 
 
