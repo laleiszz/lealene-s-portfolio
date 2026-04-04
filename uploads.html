@@ -1,115 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple carousel · example</title>
+    <style>
 
-<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-box-sizing:border-box;
-}
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-body{
-margin:0;
-}
+        .background {
+            background-image: url("images/mainbg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            filter: blur(13px);
+            z-index: -1;
+         }
 
-header{
-background:rgb(87,16,16);
-padding:20px 30px;
-display:flex;
-flex-direction:column;
-position:relative;
-margin-bottom:40px;
-}
+        .card {
+            max-width: 700px;
+            width: 100%;
+            background: rgb(245, 230, 210);
+            border-radius: 2rem;
+            padding: 2rem 1.5rem 2.5rem 1.5rem;
+            box-shadow: 0 15px 30px #2a292c;
+            text-align: center;
+        }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:20px;
-margin:0;
-padding:0;
-position:absolute;
-bottom:20px;
-right:20px;
-}
+        h2 {
+            color: rgb(87, 16, 16);
+            margin-bottom: 1.8rem;
+            font-weight: 500;
+            font-size: 2rem;
+        }
 
-nav a{
-color:black;
-font-weight:bold;
-text-decoration:none;
-padding:2px 13px;
-border-radius:15px;
-background-color:rgb(170,166,166);
-border:1px solid black;
-}
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.2rem;
+            padding: 0.5rem 0.2rem 1.5rem 0.2rem;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(87, 16, 16) rgb(158, 106, 106);
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
 
-nav a:hover{
-background-color:white;
-}
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel::-webkit-scrollbar-track {
+            background: rgb(87, 16, 16);
+            border-radius: 20px;
+        }
+        .carousel::-webkit-scrollbar-thumb {
+            background: rgb(87, 16, 16);
+            border-radius: 20px;
+        }
 
-.background{
-background-image:url("images/mainbg.jpg");
-background-size:cover;
-background-repeat:no-repeat;
-background-position:center;
-position:fixed;
-height:100%;
-width:100%;
-filter:blur(13px);
-z-index:-1;
-}
+        .carousel-item {
+            scroll-snap-align: center;
+            flex: 0 0 auto;
+            width: 400px;
+            height: 150px;
+            background: rgb(87, 16, 16);
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: rgb(170, 166, 166);
+            font-weight: bold;
+            box-shadow: 0 8px 12px rgb(170, 166, 166);
+            border: 3px solid white;
+        }
 
-.myportfolio{
-border:2px solid black;
-text-align:center;
-width:500px;
-margin:20px auto;
-border-radius:20px;
-background-color:rgb(170,166,166);
-padding:20px;
-font-size:30px;
-}
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.4rem;
+        }
 
+        .note {
+            margin-top: 1.8rem;
+            color:black;
+            background: rgb(170, 166, 166);
+            padding: 0.8rem 1.2rem;
+            border-radius: 3rem;
+            font-size: 1rem;
+            border: 1px solid black;
+        }
 
-
-footer {
-    background:rgb(87, 16, 16);
-    padding: 45px 30px;
+        .note div ul {
+    list-style: none;
     display: flex;
-    flex-direction: column; 
-    position: relative;  
-    margin-top: 200px;
-    align-items: center;
-    color: antiquewhite;
-    text-align: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+   
+}
+
+.note div a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 13px;
+    border-radius: 15px;
+    background-color: rgb(182, 176, 176);
+    border: 1px solid black;
 }
     </style>
 </head>
-
 <body>
-  <div class="background"> </div>
+    <div class="background"> </div>
 
-<header>
-     <h1 class="myportfolio"> My Portfolio </h1>
-    <nav>    
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="dashboard.html">Dashboard</a></li>
-<li><a href="uploads.html">Uploads</a></li>
-</ul>
+    <div class="card">
+        <h2><strong>Upload Page</strong></h2>
 
-    </nav>
-    </header>
+        <div class="carousel">
+           
+            <div class="carousel-item" id="item-1"><img src="images/quizup.jpg" alt="Quiz Upload Page"></div>
+            <div class="carousel-item" id="item-2"><img src="images/labup.jpg" alt="Lab Work Upload Page"></div>
+            <div class="carousel-item" id="item-3"><img src="images/majorup.jpg" alt="Major Exam Upload Page"></div>
 
+        </div>
 
+<div class="note">
 
-<footer>Facebook: Lealene Abrigo<br>
-        Instagram: @laleiszz
+<div>    
+    <ul>
+        <li><a href="#item-1">Upload Page 1</a></li>
+        <li><a href="#item-2">Upload Page 2</a></li>
+        <li><a href="#item-3">Upload Page 3</a></li>
+    </ul>
 
-</footer>
+</div>
+</div>
+        
 
-    </body>
+        <p style="margin-top: 1.5rem; border: 1px solid black; background:rgb(170, 166, 166); padding:0.6rem; border-radius:3rem;">
+           Click on the image to go to the separate upload page.
+        </p>
+</div>
 
+</body>
 </html>
