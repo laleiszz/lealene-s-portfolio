@@ -24,11 +24,6 @@ header {
     margin-bottom: 3px;
 }
 
-.logo {
-    text-align: left;
-    width: 100%;
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -108,6 +103,72 @@ nav a:hover {
 
 .personal h3 {
     margin: 10px;
+}
+
+.skills h3{
+    margin: 10px;
+
+}
+
+.skills {
+    color: rgb(87, 16, 16);
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.skillslist {
+    font-size: 20px;
+    color: rgb(87, 16, 16);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+    display: flex;
+    gap: 100px;
+}
+
+.skillslist button{
+    cursor: pointer;
+}
+
+.web button {
+    margin: 10px 0px;
+    padding: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(170, 166, 166);
+    font-size: 16px;
+    display: flex;
+}
+
+.prog button {
+    margin: 10px 0px;
+    padding:auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(170, 166, 166);
+    font-size: 16px;
+    display: flex;
+}
+
+.soft button {
+    margin: 10px 0px;
+    padding: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(170, 166, 166);
+    font-size: 16px;
+    display: flex;
+    
+}
+
+.web button:hover,
+.prog button:hover,
+.soft button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .infs {
@@ -267,11 +328,35 @@ footer{
     </div>
 </div>
 
+<div class="skills">
+    <h3>Skills</h3>
+</div>
+
+<div class="skillslist">
+    <p class="web"><strong>Web Development:</strong>
+        <button> CSS</button>
+        <button> HTML</button>
+        <button> JavaScript</button>
+    </p>
+
+    <p class="prog"><strong>Programming Languages:</strong>
+        <button> C++</button>
+        <button> Java</button>
+    </p>
+
+    <p class="soft"><strong>Soft Skills:</strong>
+        <button> Communication</button>
+        <button> Problem-solving</button>
+        <button> Teamwork</button>
+    </p>
+</div>
+
 <div class="personal">
     <h3>Personal Information</h3>
 </div>
+
 <div class="infs">
-<p><Strong>Name:</Strong>   Lealene</p>
+<p><Strong>Name:</Strong>   Lealene Abrigo</p>
             <p><strong>Student number:</strong>     251100666</p>
             <p><strong>Course and Section: </strong>     BSCS-1D</p>
 </div>
