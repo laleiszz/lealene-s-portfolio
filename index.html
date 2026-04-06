@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Lealene's Portfolio</title>
+    <title>Home Page Lealene's Portfolio</title>
 
     <style>
 
@@ -84,13 +84,28 @@ nav a:hover {
     border-radius:30px;
     margin-top: 0px;
     box-shadow:0 0 20px black;
-     
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.1);
 }
 
 .hi {
     font-size: 150px;
-    color :rgb(87, 16, 16)
+    color :rgb(87, 16, 16);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
+
+.hi:hover {
+    transform: scale(1.10) ;
+    text-shadow: 4px 4px 8px rgba(87, 16, 16, 0.3);
+}
+
 
 .personal{
     color: rgb(87, 16, 16);
@@ -127,38 +142,41 @@ nav a:hover {
     margin-left: 60px;
     display: flex;
     gap: 100px;
+    transition: all 0.3s ease-in-out;
 }
+
 
 .skillslist button{
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .web button {
     margin: 10px 0px;
-    padding: auto;
+    padding: 5px 10px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgb(170, 166, 166);
+    background-color: rgb(221, 205, 175);
     font-size: 16px;
     display: flex;
 }
 
 .prog button {
     margin: 10px 0px;
-    padding:auto;
+    padding: 5px 10px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgb(170, 166, 166);
+    background-color: rgb(221, 205, 175);
     font-size: 16px;
     display: flex;
 }
 
 .soft button {
     margin: 10px 0px;
-    padding: auto;
+    padding: 5px 10px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgb(170, 166, 166);
+    background-color: rgb(221, 205, 175);
     font-size: 16px;
     display: flex;
     
@@ -167,8 +185,11 @@ nav a:hover {
 .web button:hover,
 .prog button:hover,
 .soft button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(87, 16, 16);
+    color: rgb(255, 255, 255);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(87, 16, 16, 0.4);
+    border-color: rgb(255, 255, 255);
 }
 
 .infs {
@@ -176,12 +197,19 @@ nav a:hover {
     color: rgb(87, 16, 16);
     margin-top: 0px;
     margin-bottom: 0px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 30px;
     background-image: url("images/abtmebg.jpg");
     padding: 15px 40px;
     width: 450px;
     margin-left: 50px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.infs:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(87, 16, 16, 0.4);
 }
     
 .aboutMe { 
@@ -200,7 +228,7 @@ nav a:hover {
 }
 
 .paragraph {
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     text-align: center;
     border-radius: 30px;
     width: 800px;
@@ -211,6 +239,13 @@ nav a:hover {
     padding: 10px;
     margin-top: 0px;
     margin-left: 50px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.paragraph:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(87, 16, 16, 0.4);
 }
 
 .information {
@@ -309,7 +344,7 @@ footer{
   <div class="background"> </div>
 
 <header>
-     <h1 class="myportfolio"> My Portfolio </h1>
+     <h1 class="myportfolio"> Home Page </h1>
     <nav>    
 <ul>
 <li><a href="index.html">Home</a></li>
