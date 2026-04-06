@@ -669,27 +669,6 @@ window.addEventListener('click', (event) => {
   }
 });
 
-
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    filter = e.target.dataset.filter;
-    render();
-  });
-});
-
-
-window.addEventListener('load', load);
-window.addEventListener('storage', load);
-
-window.addEventListener('click', (event) => {
-  const modal = document.getElementById('view-modal');
-  if (event.target === modal) {
-    closeModal();
-  }
-});
-
 window.viewFile = viewFile;
 window.downloadFile = downloadFile;
 window.deleteFile = deleteFile;
