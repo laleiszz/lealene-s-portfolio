@@ -568,7 +568,7 @@ function viewFile(id) {
     modalBody.innerHTML = `<iframe src="${url}"></iframe>`;
     modal.style.display = 'block';
   } else {
-    // For other files, download
+
     const a = document.createElement('a');
     a.href = url;
     a.download = file.name;
@@ -604,7 +604,7 @@ function downloadFile(id) {
   setTimeout(() => URL.revokeObjectURL(url), 10000);
 }
 
-// Helper functions
+
 function base64ToBlob(base64, mimeType) {
   const byteCharacters = atob(base64);
   const byteNumbers = new Array(byteCharacters.length);
@@ -647,7 +647,7 @@ function formatFileSize(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-// Filter buttons
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -657,17 +657,43 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Load on page load and storage changes
+
 window.addEventListener('load', load);
 window.addEventListener('storage', load);
 
-// Close modal when clicking outside
+
 window.addEventListener('click', (event) => {
   const modal = document.getElementById('view-modal');
   if (event.target === modal) {
     closeModal();
   }
 });
+
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    filter = e.target.dataset.filter;
+    render();
+  });
+});
+
+
+window.addEventListener('load', load);
+window.addEventListener('storage', load);
+
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('view-modal');
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+window.viewFile = viewFile;
+window.downloadFile = downloadFile;
+window.deleteFile = deleteFile;
+window.closeModal = closeModal;
 </script>
 
 </body>
