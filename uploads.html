@@ -85,6 +85,7 @@
             box-shadow: 0 15px 30px #2a292c;
             text-align: center;
             margin: 0 auto;
+            border: 1px white solid;
 
         }
 
@@ -133,6 +134,12 @@
             font-weight: bold;
             box-shadow: 0 8px 12px rgb(170, 166, 166);
             border: 3px solid white;
+            transition: all 0.4s ease;
+        }
+
+        .carousel-item:hover {
+            box-shadow: 0 12px 20px rgba(87, 16, 16, 0.4);
+            transform: translateY(-5px);
         }
 
         
@@ -141,12 +148,12 @@
             height: 100%;
             object-fit: cover;
             border-radius: 1.4rem;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
         }
 
         .carousel-item a:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: scale(1.08);
+            filter: brightness(1.1);
         }
 
         .carousel-item img:hover {
@@ -181,12 +188,14 @@
             border-radius: 15px;
             background-color: rgb(182, 176, 176);
             border: 1px solid black;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
         }
 
         .note div button:hover {
-            background-color: white;
-            color: rgb(5, 5, 5);
+            background-color: rgb(87, 16, 16);
+            color: white;
+            transform: scale(1.05);
         }
 
         footer {
@@ -206,7 +215,7 @@
     <div class="background"> </div>
 
     <header>
-     <h1 class="myportfolio"> My Portfolio </h1>
+     <h1 class="myportfolio"> Upload Page </h1>
     <nav>    
         <ul>
         <li><a href="index.html">Home</a></li>
@@ -218,7 +227,7 @@
     </header>
 
     <div class="card">
-        <h2><strong>Upload Page</strong></h2>
+        <h2><strong>Click Here</strong></h2>
 
         <div class="carousel">
            
