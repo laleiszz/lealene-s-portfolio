@@ -587,7 +587,7 @@ footer {
   <div class="upload-card">
     <div class="card-header">
       <div class="card-icon">📝</div>
-      <div class="badge">QUIZ</div>
+      <div class="badge">LAB WORK</div>
     </div>
     <div class="card-body">
       <div class="file-name">Lab Work 1</div>
@@ -637,7 +637,7 @@ function updateStats() {
   const counts = { quiz: 3, lab: 1, exam: 0 };
   files.forEach(f => counts[f.type]++);
   
-  document.getElementById('total').textContent = files.length;
+  document.getElementById('total').textContent = 4;
   document.getElementById('quiz-count').textContent = counts.quiz;
   document.getElementById('lab-count').textContent = counts.lab;
   document.getElementById('exam-count').textContent = counts.exam;
