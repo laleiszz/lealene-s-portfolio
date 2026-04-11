@@ -515,7 +515,7 @@ footer {
 </div>
 
 <div class="uploads-grid">
-  <div class="upload-card">
+  <div class="upload-card" data-type="quiz">
     <div class="card-header">
       <div class="card-icon">📝</div>
       <div class="badge">QUIZ</div>
@@ -584,7 +584,7 @@ footer {
 </div>
 
 <div class="uploads-grid">
-  <div class="upload-card">
+  <div class="upload-card data-type="lab"">
     <div class="card-header">
       <div class="card-icon">📝</div>
       <div class="badge">LAB WORK</div>
@@ -848,6 +848,31 @@ window.viewFile = viewFile;
 window.downloadFile = downloadFile;
 window.deleteFile = deleteFile;
 window.closeModal = closeModal;
+
+  const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    const filter = btn.dataset.filter;
+
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.upload-card');
+
+    cards.forEach(card => {
+      const type = card.getAttribute('data-type');
+
+      if (filter === 'all') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = (type === filter) ? 'block' : 'none';
+      }
+    });
+
+  });
+});
 </script>
 
 </body>
