@@ -659,10 +659,10 @@ function load() {
 }
 
 function updateStats() {
-  const counts = { quiz: 3, lab: 1, exam: 0 };
+  const counts = { quiz: 3, lab: 2, exam: 0 };
   files.forEach(f => counts[f.type]++);
   
-  document.getElementById('total').textContent = 4;
+  document.getElementById('total').textContent = 5;
   document.getElementById('quiz-count').textContent = counts.quiz;
   document.getElementById('lab-count').textContent = counts.lab;
   document.getElementById('exam-count').textContent = counts.exam;
