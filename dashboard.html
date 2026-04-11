@@ -669,7 +669,7 @@ function updateStats() {
 }
 
 function updateChart() {
-  const counts = { quiz: 3, lab: 1, exam: 0 };
+  const counts = { quiz: 3, lab: 2, exam: 0 };
   files.forEach(f => counts[f.type]++);
 
   const ctx = document.getElementById('chart').getContext('2d');
